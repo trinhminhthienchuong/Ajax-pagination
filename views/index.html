@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Buổi 7</title>
+    <link rel="stylesheet" href="">
+</head>
+<style>
+    .banco {
+        width: 400px;
+    }
+</style>
+
+<body>
+
+    <div class="banco"> </div>
+
+    <div class="noidung">
+        <p>Hello World!</p>
+        <input type="text" id="content" placeholder="Nhập nội dung">
+        <button class="get">Click me</button>
+    </div>
+
+
+
+
+    <a href="http://khoapham.vn" target="_blank" class="khoapham">Khoa Phạm</a>
+    <br>
+    <button class="clickMe" id="">Click Me!</button>
+
+    <script src="../public/assets/vendors/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            //let noidung = $('.noidung').text() //lấy dữ liệu
+            //alert(noidung);
+            $('button.get').click(() => {
+                //let get = ($('#content').length > 0) ? ($('#content').val()) : ("fuc");
+
+                alert(get)
+            })
+            $('.clickMe').click(function() {
+                $('.noidung').html('<h1>Chào cả lớp<h1>') //Thay toàn bộ dữ liệu trong class noidung thành dữ liệu trong hàm html()
+                    //$('.noidung').append('<h1>Chào cả lớp<h1>') // thêm data vào sau đối tượng
+                    //$('.noidung').prepend('<h1>Chào cả lớp<h1>') // thêm data vào trước đối tượng
+                    // var data = $('.khoapham').attr('href'); //lấy data
+                    // console.log(data)
+
+                $('.khoapham').attr('href', 'http://online.khoapham.vn/') //gán data
+            })
+        })
+    </script>
+    <!-- <script>
+	$(document).ready(function(){
+		
+		for(var i=0; i<324; i++){
+			$('.banco').append('<div class="o_co"></div>')
+		}
+		$('.o_co').css({
+			"width":"20px",
+			"height":"20px",
+			"border":"1px solid blue",
+			"float":"left",
+			'background-color':"#a8ffed",
+			'text-align':"center",
+		})
+		$('.o_co').mouseover(function(){
+			$(this).css({'background-color':"#f7fc64"})
+		})
+		$('.o_co').mouseout(function(){
+			$(this).css({'background-color':"#a8ffed"})
+		})
+		var dem = 0;
+		$('.o_co').click(function(){
+		    if($(this).html()== "") //lấy data
+		    {
+				dem = dem + 1;
+				if(dem%2==0)
+				{
+					$(this).html("X"); //gán data
+				}
+				else
+					$(this).html("O");
+			}
+			else
+			{
+				alert("chơi ăn gian");
+			}
+			
+		})
+	})
+	</script>
+	 -->
+</body>
+
+</html>
